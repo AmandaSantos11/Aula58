@@ -1,10 +1,20 @@
 package ClubeSocial
 
+import java.util.*
+
 class Clube {
     var listaDeMembros = ArrayList<Membro>()
-    fun adcionarMembro(membro: Membro){}
-    fun removerMembro(membro: Membro){}
+    fun adcionarMembro(membro: Membro){
+        listaDeMembros.add(membro)
+    }
+    fun removerMembro(membro: Membro){
+        listaDeMembros.remove(membro)
+    }
     fun pontuacaoTotal():Int {
-        return 0
+        var total = 0
+        for(membro in listaDeMembros){
+            total+=membro.obterPontos()
+        }
+        return total
     }
 }
