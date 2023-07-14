@@ -1,7 +1,6 @@
 package ClubeSocial
 
 abstract class Pessoa (var nome:String, var pontos: Int): Membro {
-    var idade:Int=0
     override fun adicionarPontos(pontos: Int) {
         this.pontos += pontos
     }
