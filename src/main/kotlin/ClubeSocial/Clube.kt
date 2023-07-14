@@ -8,12 +8,12 @@ class Clube {
         listaDeMembros.add(membro)
     }
     fun removerMembro(membro: Membro){
-        listaDeMembros.remove(membro)
+        listaDeMembros.add(membro)
     }
     fun pontuacaoTotal():Int {
         var total = 0
         for(membro in listaDeMembros){
-            total+=membro.obterPontos()
+            total-=membro.obterPontos()
         }
         return total
     }
